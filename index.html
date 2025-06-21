@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSBuilds</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #000;
+      color: black;
+    }
+
+
+    .navbar-scrolled {
+  background-color: #000 !important;  /* Optional: add background on scroll */
+}
+
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .nav-link {
+  color: #fff !important;
+}
+
+.raleway-light {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+.raleway-semibold {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+.raleway-bold {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+
+    .navbar {
+      background-color: transparent;
+      transition: background 0.3s;
+    }
+
+    .navbar-scrolled {
+      background-color: rgba(0, 0, 0, 0.9) !important;
+      color:white;
+    }
+    
+    .saira-condensed-black {
+  font-family: "madani";
+  font-weight: 200;
+  font-style: normal;
+}
+    .hero {
+  background:white;
+  height: 100vh;
+}
+
+
+.hero-text-box{
+  backdrop-filter: blur(4px);
+  
+  padding: 2rem;
+  color: #000;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+
+   .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+    }
+  
+
+    .nav-link {
+      color: black !important;
+
+    }
+
+    .nav-link:hover {
+      color: gray !important;
+    }
+
+    .popup-img {
+  max-width: 60%; /* adjust between 40% to 80% based on preference */
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Default modal: white background, black text */
+.modal-content {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Drawing modals: black background, white text */
+.drawing-modal .modal-content {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Optional: Style close button for dark background */
+.drawing-modal .btn-close {
+  filter: invert(1); /* makes the white close button visible on dark */
+}
+
+
+.btn-close {
+  filter: invert(1); /* Make the close icon white */
+}
+
+.hero-img {
+  margin-top: -250px; /* Adjust this value as needed */
+}
+/* Smaller images in drawing modals */
+.drawing-modal .modal-body img {
+  max-width: 60%;
+  max-height: 400px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#" style="color: #000;">DSBuilds</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#projects">Projects</a></li>
+             <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#certifications">Certifications</a></li>
+                <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#credentials">Credentials</a></li>
+                   <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#drawings">Works</a></li>
+          <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ <!-- Hero Section -->
+<section class="hero d-flex align-items-center text-white" style="height: 110vh;">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left: Image -->
+      <div class="col-md-6 text-center" data-aos="fade-right" >
+      <img src="img.png" alt="Developer Photo" class="img-fluid hero-img"  />
+
+
+      </div>
+
+      <!-- Right: Text - centered vertically, aligned left -->
+      <div class="col-md-6 d-flex align-items-center" data-aos="fade-left">
+        <div class="hero-text-box text-start">
+          <h1 class="display-5 raleway-semibold">
+            Driven by LOGIC,<br>
+            Inspired by DESIGN<br>
+            Hi! I am Divya Sundhari.
+          </h1>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="row align-items-center">
+       
+        <div class="col-md-10" data-aos="fade-left">
+          <h2>About Me</h2>
+          <p>I’m doing my B.E Computer Science Engineering Degree in Rajalakshmi Engineering College.I have a deep curiosity for technology and its ability to solve real-world problems. I’m always eager to take on new challenges that push me to think critically and creatively.<br>
+</p>
+        
+<p>With a strong work ethic, attention to detail, and a proactive mindset, I’m excited to contribute meaningfully to innovative tech projects. I look forward to joining a forward-thinking company where I can apply my skills, learn from experienced professionals, and grow into a valuable part of the tech industry.</p>
+
+<p>Outside of academics, I enjoy engaging in creative and energizing activities like music, drawing, and playing badminton. I’m also passionate about volunteering, reading books that broaden my perspective, and staying active through regular workouts—all of which help me stay balanced, focused, and driven.</p>
+
+</div>
+
+ 
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects" class="py-5 bg-white text-black">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">My Projects</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Project 1 -->
+      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#dsbuildsModal" style="cursor: pointer;">
+          <img src="img7.png" class="card-img-top" alt="DSBuilds">
+          <div class="card-body">
+            <h5 class="card-title fw-semibold">DSBuilds</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="150">
+        <div class="card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#fitSyncModal" style="cursor: pointer;">
+          <img src="img3.png" class="card-img-top" alt="FitSync">
+          <div class="card-body">
+            <h5 class="card-title fw-semibold">FitSync</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#veritasModal" style="cursor: pointer;">
+          <img src="img4.png" class="card-img-top" alt="Veritas Vogue">
+          <div class="card-body">
+            <h5 class="card-title fw-semibold">Veritas Vogue</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="250">
+        <div class="card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#trackExpiryModal" style="cursor: pointer;">
+          <img src="img5.png" class="card-img-top" alt="TrackExpiry">
+          <div class="card-body">
+            <h5 class="card-title fw-semibold">TrackExpiry</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 - Centered if Odd Count -->
+      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card h-100 shadow-sm border-0 mx-auto" data-bs-toggle="modal" data-bs-target="#expenseModal" style="cursor: pointer;">
+          <img src="img6.png" class="card-img-top" alt="Expense Automation">
+          <div class="card-body">
+            <h5 class="card-title fw-semibold text-center">Expense Automation</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Certifications Section -->
+<section id="certifications" class="py-5 bg-black text-white">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Certifications</h2>
+
+    <div class="cert-scroll d-flex overflow-auto gap-4 pb-3" data-aos="fade-up">
+      
+      <!-- Certification Card 1 -->
+      <div class="card bg-dark text-white flex-shrink-0" style="width: 18rem;">
+        <img src="cert1.png" class="card-img-top" alt="RHCSA Certificate">
+        <div class="card-body">
+          <h5 class="card-title">RHCSA Certified</h5>
+          <p class="card-text">Red Hat System Admin certification – Scored 95%</p>
+        </div>
+      </div>
+
+      <!-- Certification Card 2 -->
+      <div class="card bg-dark text-white flex-shrink-0" style="width: 18rem;">
+        <img src="cert2.jpg" class="card-img-top" alt="UiPath Certificate">
+        <div class="card-body">
+          <h5 class="card-title">RPA Citizen Developer</h5>
+          <p class="card-text">UiPath Foundation Credential - UiPath Academy</p>
+        </div>
+      </div>
+
+      <!-- Certification Card 3 -->
+      <div class="card bg-dark text-white flex-shrink-0" style="width: 18rem;">
+        <img src="cert3.png" class="card-img-top" alt="Cisco Certificate">
+        <div class="card-body">
+          <h5 class="card-title">Networking Basics</h5>
+          <p class="card-text">Certified by Cisco Networking Academy</p>
+        </div>
+      </div>
+
+      <!-- Certification Card 4 -->
+      <div class="card bg-dark text-white flex-shrink-0" style="width: 18rem;">
+        <img src="cert4.png" class="card-img-top" alt="Oracle Certificate">
+        <div class="card-body">
+          <h5 class="card-title">Database Programming</h5>
+          <p class="card-text">Oracle Academy SQL Programming Certificate</p>
+        </div>
+      </div>
+
+      <!-- Add more cards similarly... -->
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Credentials & Badges Section -->
+<!-- Credentials & Badges Section -->
+<section id="credentials" class="py-5 bg-dark text-white">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Credentials & Badges</h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- RHCSA Badge -->
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+        <div class="card bg-black text-white h-100 shadow-sm border-0">
+          <img src="redhat-logo1.png" class="card-img-top p-4" alt="RHCSA Badge">
+          <div class="card-body">
+            <h5 class="card-title">Red Hat Certified System Administrator (RHCSA)</h5>
+            <a href="https://www.credly.com/badges/806bb792-bea8-4fe5-b02f-36fd9f4aa242/linked_in_profile" class="btn btn-outline-light btn-sm" target="_blank">Show Credential</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Red Hat Program Learner -->
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card bg-black text-white h-100 shadow-sm border-0">
+          <img src="redhat-logo2.png" class="card-img-top p-4" alt="Red Hat Learner Badge">
+          <div class="card-body">
+            <h5 class="card-title">2025 Red Hat Academy – Program Learner</h5>
+            
+            <a href="https://www.credly.com/badges/e3426466-1a82-45b6-a3dd-e1c7b39da8d6/linked_in_profile" class="btn btn-outline-light btn-sm" target="_blank">Show Credential</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- UiPath Automation Explorer -->
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card bg-black text-white h-100 shadow-sm border-0">
+          <img src="uipath-logo1.png" class="card-img-top p-4" alt="UiPath Automation Explorer">
+          <div class="card-body">
+            <h5 class="card-title">UiPath Academy Automation Explorer</h5>
+          
+            <a href="https://credentials.uipath.com/daee4d9b-1b8b-495a-953c-c07f5c3b66bc" class="btn btn-outline-light btn-sm" target="_blank">Show Credential</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- UiPath RPA Citizen Developer -->
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card bg-black text-white h-100 shadow-sm border-0">
+          <img src="uipath-logo2.png" class="card-img-top p-4" alt="UiPath RPA Badge">
+          <div class="card-body">
+            <h5 class="card-title">UiPath RPA Citizen Developer Foundation</h5>
+            <a href="https://credentials.uipath.com/fdd15f90-ab45-4a07-995b-1a229035849e" class="btn btn-outline-light btn-sm" target="_blank">Show Credential</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="drawings" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Pencil Works</h2>
+    <div class="row justify-content-center g-4">
+
+      <!-- Drawing 1 -->
+      <div class="col-md-5" data-aos="fade-up">
+        <img src="draw1.jpeg" class="img-fluid rounded shadow gallery-img"
+             alt="Drawing 1"
+             data-bs-toggle="modal" data-bs-target="#drawingModal1"
+             style="cursor:pointer; max-width: 90%; margin: auto; display: block;">
+      </div>
+
+      <!-- Drawing 2 -->
+      <div class="col-md-5" data-aos="fade-up" data-aos-delay="100">
+        <img src="draw2.jpeg" class="img-fluid rounded shadow gallery-img"
+             alt="Drawing 2"
+             data-bs-toggle="modal" data-bs-target="#drawingModal2"
+             style="cursor:pointer; max-width: 90%; margin: auto; display: block;">
+      </div>
+
+      <!-- Repeat similarly for 3 to 8 -->
+      <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+        <img src="draw3.jpeg" class="img-fluid rounded shadow gallery-img"
+             alt="Drawing 3"
+             data-bs-toggle="modal" data-bs-target="#drawingModal3"
+             style="cursor:pointer; max-width: 90%; margin: auto; display: block;">
+      </div>
+
+      <div class="col-md-5" data-aos="fade-up" data-aos-delay="300">
+        <img src="draw4.jpeg" class="img-fluid rounded shadow gallery-img"
+             alt="Drawing 4"
+             data-bs-toggle="modal" data-bs-target="#drawingModal4"
+             style="cursor:pointer; max-width: 90%; margin: auto; display: block;">
+      </div>
+
+      <div class="col-md-5" data-aos="fade-up" data-aos-delay="400">
+        <img src="draw5.jpeg" class="img-fluid rounded shadow gallery-img"
+             alt="Drawing 5"
+             data-bs-toggle="modal" data-bs-target="#drawingModal5"
+             style="cursor:pointer; max-width: 90%; margin: auto; display: block;">
+      </div>
+
+      <div class="col-md-5" data-aos="fade-up" data-aos-delay="500">
+        <img src="draw6.jpeg" class="img-fluid rounded shadow gallery-img"
+             alt="Drawing 6"
+             data-bs-toggle="modal" data-bs-target="#drawingModal6"
+             style="cursor:pointer; max-width: 90%; margin: auto; display: block;">
+      </div>
+
+      <div class="col-md-5" data-aos="fade-up" data-aos-delay="600">
+        <img src="draw7.jpeg" class="img-fluid rounded shadow gallery-img"
+             alt="Drawing 7"
+             data-bs-toggle="modal" data-bs-target="#drawingModal7"
+             style="cursor:pointer; max-width: 90%; margin: auto; display: block;">
+      </div>
+
+      <div class="col-md-5" data-aos="fade-up" data-aos-delay="700">
+        <img src="draw8.jpeg" class="img-fluid rounded shadow gallery-img"
+             alt="Drawing 8"
+             data-bs-toggle="modal" data-bs-target="#drawingModal8"
+             style="cursor:pointer; max-width: 90%; margin: auto; display: block;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 text-white text-center bg-dark">
+    <div class="container" data-aos="fade-up">
+      <h2>Let's Connect</h2>
+      <p class="mb-3">Feel free to reach out via email or follow me on social platforms.</p>
+      <p>Email: <a href="mailto:smdivyasundhari@gmail.com" class="text-warning">smdivyasundhari@gmail.com</a></p>
+      <div>
+        <a href="www.linkedin.com/in/divya-sundhari-1a9035264" class="btn btn-outline-light btn-sm mx-2">LinkedIn</a>
+        <a href="https://github.com/Divya-sm25" class="btn btn-outline-light btn-sm mx-2">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <div class="container">
+      <small>&copy; 2025 DSBuilds. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap & AOS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Scroll navbar background change
+    window.addEventListener('scroll', function () {
+      const nav = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        nav.classList.add('navbar-scrolled');
+      } else {
+        nav.classList.remove('navbar-scrolled');
+      }
+    });
+  </script>
+
+
+
+
+
+
+<!-- FitSync Modal -->
+<div class="modal fade" id="fitSyncModal" tabindex="-1" aria-labelledby="fitSyncLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="fitSyncLabel">FitSync – Fitness Tracker Web App</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="row mb-4">
+          <div class="col-md-6 mb-3">
+
+            <img src="img3a.png" class="img-fluid rounded shadow-sm" alt="Screenshot 1">
+          </div>
+            <div class="col-md-6">
+    <div class="mb-3">
+      <img src="img3b.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+    </div>
+    <div>
+      <img src="img3c.png" class="img-fluid rounded shadow-sm" alt="Screenshot 3">
+    </div>
+  </div>
+          <div class="col-md-6 mb-3">
+            <img src="img3d.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img3e.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img3f.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+          <video class="w-100 rounded shadow-sm mb-4" controls>
+  <source src="vid3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+</div>
+
+          
+        </div>
+
+        <p>
+  <strong>Tech Stack:</strong> The website is built using HTML, CSS, PHP, and MySQL. It is styled with custom CSS and uses PHP for server-side scripting and session management. MySQL is used for storing user data and activity logs. The interface includes dynamic elements rendered based on user input and database queries.<br><br>
+
+  <strong>Outcomes:</strong> This Fitness Tracker allows users to register and log in securely, track their running and weightlifting activities, log food intake, and calculate calories burned. Users can view personalized activity history, including calories burned, distances run, and weights lifted. The site encourages healthy living by offering a list of nutritious food items along with calorie details.
+</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Veritas Vogue Modal -->
+<div class="modal fade" id="veritasModal" tabindex="-1" aria-labelledby="veritasLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="veritasLabel">Veritas Vogue – Fashion Admin Dashboard</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="row mb-4">
+          <div class="col-md-12 mb-3">
+          <video class="w-100 rounded shadow-sm mb-4" controls>
+  <source src="vid4.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</div>
+          <div class="col-md-6 mb-3">
+            <img src="img4a.png" class="img-fluid rounded shadow-sm" alt="Screenshot 1">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img4b.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img4c.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img4d.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img4e.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img4f.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img4g.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img4h.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img4i.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img4j.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          
+        </div>
+
+        <p>Tech Stack- HTML, CSS, JavaScript, PHP, and MySQL.</br>
+          Veritas Vogue is a modern admin dashboard built for a fashion brand to manage products, customers, and analytics in real time. The interface is responsive, data-driven, and designed with user experience in mind.
+          Responsive and aesthetic UI with black-themed modern design.</p>
+<p>
+Dynamic product listing with category-wise filtering (e.g., Men, Women, Wedding).</p>
+<p>
+"Add to Cart" and Like (Heart) button functionality with UI feedback.</p>
+<p>
+Navigation between Home, Collections, Products, and Contact pages.</p>
+<p>
+Integrated PHP backend to fetch products from MySQL based on category.</p>
+<p>
+URL-based filtering (e.g., products.html?category=mens_wear).</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TrackExpiry Modal -->
+<div class="modal fade" id="trackExpiryModal" tabindex="-1" aria-labelledby="trackExpiryLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="trackExpiryLabel">TrackExpiry – Inventory Expiry Tracker</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="row mb-4">
+          <div class="col-md-6 mb-3">
+            <img src="img5a.png" class="img-fluid rounded shadow-sm" alt="Screenshot 1">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img5b.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img5c.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img5d.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img5e.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img5f.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img5g.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+        </div>
+
+        <p><strong>Tech Stack:</strong></p>
+<p>
+• Frontend: HTML, CSS, JavaScript (Dashboard Interface)<br>
+• Backend: Python (Logic & Automation)<br>
+• Database: Firebase Realtime Database / Firestore<br>
+• QR Code: Python QR Code Library (e.g., qrcode)<br>
+• Notification System: Firebase Cloud Messaging (FCM)<br>
+• Data Visualization: Matplotlib, Pandas<br>
+• Hosting: Firebase Hosting (optional for deployment)
+</p>
+
+<p><strong>Project Outcomes:</strong></p>
+<p>
+• Reduced expired product waste by up to 40% through timely alerts<br>
+• Automated daily expiry checks without manual intervention<br>
+• Enabled quick product lookup via QR code scanning<br>
+• Improved stock turnover rate by applying shelf life-based discounts<br>
+• Provided real-time inventory visibility and expiry analytics via dashboard<br>
+• Enhanced decision-making through expiry trend reports and charts
+</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Expense Modal -->
+<div class="modal fade" id="expenseModal" tabindex="-1" aria-labelledby="expenseLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="expenseLabel">Expense Reimbursement Automation – UIpath Workflow</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="row mb-4">
+          <div class="col-md-12 mb-3">
+          <video class="w-100 rounded shadow-sm mb-4" controls>
+  <source src="vid6.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</div>
+          <div class="col-md-6 mb-3">
+            <img src="img6a.png" class="img-fluid rounded shadow-sm" alt="Screenshot 1">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img6b.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img6c.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          
+        </div>
+<p><strong>Tech Stack:</strong> UiPath Studio, UiPath Orchestrator (Triggers), Excel, PDF Processing, SMTP Email Integration, Windows File System</p>
+
+<p><strong>Outcomes:</strong></p>
+<p>✓ Automated extraction of expense data from submitted PDF receipts using UiPath’s document understanding capabilities.</p>
+<p>✓ Validated each reimbursement request against predefined business rules (e.g., duplicate check, missing info, limit thresholds).</p>
+<p>✓ Stored extracted data in structured Excel sheets for record-keeping and reporting.</p>
+<p>✓ Sent automated email updates to employees based on the approval status via SMTP integration.</p>
+<p>✓ Enabled manager-level review and approval directly from the automation workflow without manual intervention.</p>
+<p>✓ Used UiPath Orchestrator triggers to schedule and execute bots automatically at specific intervals or upon new receipt uploads.</p>
+<p>✓ Ensured Finance department was notified and updated the status of completed reimbursements automatically.</p>
+<p>✓ Improved transparency and auditability of expense claims throughout the workflow.</p>
+<p>✓ Minimized manual errors, increased process efficiency, and ensured timely processing of employee claims.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Expense Modal -->
+<div class="modal fade" id="dsbuildsModal" tabindex="-1" aria-labelledby="dsbuildsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="dsbuildsLabel">DSBuilds - My Portfolio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="row mb-4">
+          
+          <div class="col-md-6 mb-3">
+            <img src="img7a.png" class="img-fluid rounded shadow-sm" alt="Screenshot 1">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img7b.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img7c.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img7d.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="img7e.png" class="img-fluid rounded shadow-sm" alt="Screenshot 2">
+          </div>
+          
+        </div>
+<p class="text-center px-3">
+  This portfolio website was built using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Bootstrap</strong> for a responsive and clean layout, with <strong>JavaScript</strong> and <strong>AOS animations</strong> to enhance user interaction. The design reflects a strong sense of creativity and functionality. Through this project, I demonstrated my front-end development skills, effective UI/UX design, and the ability to present my technical achievements and creative work in a professional digital space.
+</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Drawing 1 Modal -->
+<!-- Drawing Modal Template -->
+<div class="modal fade drawing-modal" id="drawingModal1" tabindex="-1" aria-labelledby="drawingModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="drawingModal1Label">Half Bloomed, Half Broken</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="draw1.jpeg" class="img-fluid rounded mb-5 popup-img" alt="Drawing 1">
+        <p>A face divided — stitched lips, flower for an eye, and cascading petals. She is the embodiment of resilience through pain. The flower over her eye symbolizes beauty she chooses to see despite darkness. The stitches on her lips hint at a past of silence, yet she holds her head high. She is mysterious, artistic, and fiercely healing.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Duplicate and update for Drawing 2 to 8 -->
+<div class="modal fade drawing-modal" id="drawingModal2" tabindex="-1" aria-labelledby="drawingModal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="drawingModal2Label">Two Souls, One Self</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="draw2.jpeg" class="img-fluid rounded mb-3" alt="Drawing 2">
+        <p>Two faces emerge from one — both serene, both closed-eyed. Flowers link them like memories. She is caught between what was and what is, mourning a past self while blooming into someone new. The hummingbirds bring a whisper of rebirth. This piece is deeply spiritual, melancholic yet blooming.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade drawing-modal" id="drawingModal3" tabindex="-1" aria-labelledby="drawingModal3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="drawingModal3Label">Growing Through Her Thoughts</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="draw3.jpeg" class="img-fluid rounded mb-3" alt="Drawing 3">
+        <p>Two faces emerge from one — both serene, both closed-eyed. Flowers link them like memories. She is caught between what was and what is, mourning a past self while blooming into someone new. The hummingbirds bring a whisper of rebirth. This piece is deeply spiritual, melancholic yet blooming.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade drawing-modal" id="drawingModal4" tabindex="-1" aria-labelledby="drawingModal4Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="drawingModal4Label">Tiger’s Mark</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="draw4.jpeg" class="img-fluid rounded mb-3" alt="Drawing 4">
+        <p>This anime-style character wears scars like honor, and a tiger tattoo like a soul emblem. With a smile that hides pain and hair wild as his spirit, he is bold, loyal, and deeply human. Every line adds to his story — of battles, friendship, and hope. He’s a warrior with a heart.
+
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade drawing-modal" id="drawingModal5" tabindex="-1" aria-labelledby="drawingModal5Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="drawingModal5Label">The Dancer’s Soul</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="draw5.jpeg" class="img-fluid rounded mb-3" alt="Drawing 5">
+        <p>A ballerina mid-motion, arms stretched to the cosmos, hair flowing like music. She’s not just dancing — she’s flying. Her poise speaks of freedom, grace, and untamed ambition. Though drawn in black and white, you can feel the rhythm of her joy. She is passion in motion, delicate and powerful.
+
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade drawing-modal" id="drawingModal6" tabindex="-1" aria-labelledby="drawingModal6Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="drawingModal6Label">Gaze of Blossoms</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="draw6.jpeg" class="img-fluid rounded mb-3" alt="Drawing 6">
+        <p>Framed by cherry blossoms and shaded in mystery, this girl's expression is subtle yet intense. Her gaze tells you she’s not easily impressed — or deceived. With elegance in her eyes and power in her stillness, she represents quiet confidence, a queen in her own garden.
+
+
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade drawing-modal" id="drawingModal7" tabindex="-1" aria-labelledby="drawingModal7Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="drawingModal7Label">Strength in the Mess</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="draw7.jpeg" class="img-fluid rounded mb-3" alt="Drawing 7">
+        <p>Hair tied up, expression tired yet striking — this figure shows the raw side of strength. She has fought silent battles, wiped away invisible tears, and still stands proud. The rough sketch lines echo a storm within, yet she’s composed. She is authentic, emotionally intelligent, unfiltered.
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade drawing-modal" id="drawingModal8" tabindex="-1" aria-labelledby="drawingModal8Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="drawingModal8Label">Fragments of Strength</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="draw8.jpeg" class="img-fluid rounded mb-3" alt="Drawing 8">
+        <p>Geometric shards form half a face, representing how identity is built — piece by piece. The eye stares forward, alert and unafraid. This portrait captures the soul of someone who’s been broken and rebuilt stronger, who sees the world analytically yet feels deeply. She’s sharp, calculated, unshaken.
+
+</p>    </div>
+    </div>
+  </div>
+</div>
+
+<!-- Repeat modals with unique IDs and content for draw3 to draw8 -->
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  window.addEventListener('scroll', function () {
+    const nav = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      nav.classList.add('navbar-scrolled');
+    } else {
+      nav.classList.remove('navbar-scrolled');
+    }
+  });
+</script>
+
+
+
+
+</body>
+</html>
