@@ -32,10 +32,6 @@
   color: #fff !important;
 }
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22' /%3e%3c/svg%3e");
-}
-
 .raleway-light {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
@@ -141,6 +137,10 @@
 }
 
 
+.btn-close {
+  filter: invert(1); /* Make the close icon white */
+}
+
 .hero-img {
   margin-top: -250px; /* Adjust this value as needed */
 }
@@ -154,7 +154,77 @@
   display: block;
 }
 
+.text-justify {
+  text-align: justify;
+}
 
+
+
+.skills-section {
+  padding: 40px 20px;
+  background: #000; /* Black background */
+  color: #fff;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.skills-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  flex: 1;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.skill-bar {
+  flex: 4;
+  height: 12px;
+  background: #222;
+  border-radius: 8px;
+  margin: 0 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #fff, #777);
+  border-radius: 8px;
+  animation: fillAnimation 2s forwards;
+}
+
+.skill-percent {
+  flex: 0.5;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.skill:hover .skill-fill {
+  background: linear-gradient(90deg, #ccc, #fff);
+}
+
+@keyframes fillAnimation {
+  to {
+    width: calc(var(--percent) * 1%);
+  }
+}
 
   </style>
 </head>
@@ -170,10 +240,11 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#projects">Projects</a></li>
              <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#certifications">Certifications</a></li>
                 <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#credentials">Credentials</a></li>
-                   <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#drawings">Works</a></li>
+                   <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#drawings">Pencil</a></li>
           <li class="nav-item" style="padding-right: 50px;"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -211,25 +282,129 @@
 
 
   <!-- About Section -->
-  <section id="about" class="py-5 bg-dark text-white">
-    <div class="container">
-      <div class="row align-items-center">
-       
-        <div class="col-md-10" data-aos="fade-left">
-          <h2>About Me</h2>
-          <p>I’m doing my B.E Computer Science Engineering Degree in Rajalakshmi Engineering College.I have a deep curiosity for technology and its ability to solve real-world problems. I’m always eager to take on new challenges that push me to think critically and creatively.<br>
-</p>
-        
-<p>With a strong work ethic, attention to detail, and a proactive mindset, I’m excited to contribute meaningfully to innovative tech projects. I look forward to joining a forward-thinking company where I can apply my skills, learn from experienced professionals, and grow into a valuable part of the tech industry.</p>
-
-<p>Outside of academics, I enjoy engaging in creative and energizing activities like music, drawing, and playing badminton. I’m also passionate about volunteering, reading books that broaden my perspective, and staying active through regular workouts—all of which help me stay balanced, focused, and driven.</p>
-
-</div>
-
  
+<section id="about" class="py-5 bg-dark text-white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10" data-aos="fade-left">
+        <h2 class="mb-4">About Me</h2>
+        <p class="text-justify">
+          I’m doing my B.E Computer Science Engineering Degree in Rajalakshmi Engineering College.
+          I have a deep curiosity for technology and its ability to solve real-world problems.
+          I’m always eager to take on new challenges that push me to think critically and creatively.
+        </p>
+        <p class="text-justify">
+          With a strong work ethic, attention to detail, and a proactive mindset, I’m excited to
+          contribute meaningfully to innovative tech projects. I look forward to joining a
+          forward-thinking company where I can apply my skills, learn from experienced professionals,
+          and grow into a valuable part of the tech industry.
+        </p>
+        <p class="text-justify">
+          Outside of academics, I enjoy engaging in creative and energizing activities like music,
+          drawing, and playing badminton. I’m also passionate about volunteering, reading books that
+          broaden my perspective, and staying active through regular workouts—all of which help me stay
+          balanced, focused, and driven.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section" data-aos="fade-up" data-aos-duration="1200">
+  <h2 class="skills-title" data-aos="fade-down" data-aos-duration="1000">
+    My Skills
+  </h2>
+  <div class="skills-container">
+
+    <div class="skill" data-aos="fade-right" data-aos-delay="100">
+      <span class="skill-name">C</span>
+      <div class="skill-bar">
+        <div class="skill-fill" style="--percent: 75"></div>
+      </div>
+      <span class="skill-percent">75%</span>
+    </div>
+
+    <div class="skill" data-aos="fade-right" data-aos-delay="200">
+      <span class="skill-name">Python</span>
+      <div class="skill-bar">
+        <div class="skill-fill" style="--percent: 75"></div>
+      </div>
+      <span class="skill-percent">75%</span>
+    </div>
+
+    <div class="skill" data-aos="fade-right" data-aos-delay="300">
+      <span class="skill-name">Java</span>
+      <div class="skill-bar">
+        <div class="skill-fill" style="--percent: 85"></div>
+      </div>
+      <span class="skill-percent">85%</span>
+    </div>
+
+    <div class="skill" data-aos="fade-right" data-aos-delay="400">
+      <span class="skill-name">HTML</span>
+      <div class="skill-bar">
+        <div class="skill-fill" style="--percent: 80"></div>
+      </div>
+      <span class="skill-percent">80%</span>
+    </div>
+
+    <div class="skill" data-aos="fade-right" data-aos-delay="500">
+      <span class="skill-name">CSS</span>
+      <div class="skill-bar">
+        <div class="skill-fill" style="--percent: 75"></div>
+      </div>
+      <span class="skill-percent">75%</span>
+    </div>
+
+    <div class="skill" data-aos="fade-right" data-aos-delay="600">
+      <span class="skill-name">JavaScript</span>
+      <div class="skill-bar">
+        <div class="skill-fill" style="--percent: 85"></div>
+      </div>
+      <span class="skill-percent">85%</span>
+    </div>
+
+    <div class="skill" data-aos="fade-right" data-aos-delay="700">
+      <span class="skill-name">React</span>
+      <div class="skill-bar">
+        <div class="skill-fill" style="--percent: 65"></div>
+      </div>
+      <span class="skill-percent">65%</span>
+    </div>
+
+    <div class="skill" data-aos="fade-right" data-aos-delay="800">
+      <span class="skill-name">MySQL</span>
+      <div class="skill-bar">
+        <div class="skill-fill" style="--percent: 80"></div>
+      </div>
+      <span class="skill-percent">80%</span>
+    </div>
+
+    <div class="skill" data-aos="fade-right" data-aos-delay="900">
+      <span class="skill-name">GitHub</span>
+      <div class="skill-bar">
+        <div class="skill-fill" style="--percent: 70"></div>
+      </div>
+      <span class="skill-percent">70%</span>
+    </div>
+
+    <div class="skill" data-aos="fade-right" data-aos-delay="1000">
+      <span class="skill-name">UiPath Studio</span>
+      <div class="skill-bar">
+        <div class="skill-fill" style="--percent: 70"></div>
+      </div>
+      <span class="skill-percent">70%</span>
+    </div>
+
+  </div>
+</section>
+
+
+
+
 
   <!-- Projects Section -->
 <section id="projects" class="py-5 bg-white text-black">
@@ -343,62 +518,61 @@
 
 
 <!-- Credentials & Badges Section -->
-<!-- Credentials & Badges Section -->
 <section id="credentials" class="py-5 bg-dark text-white">
   <div class="container">
     <h2 class="text-center mb-5" data-aos="fade-up">Credentials & Badges</h2>
 
-    <div class="row g-4 justify-content-center">
+    <div class="d-flex justify-content-center flex-wrap gap-4">
 
       <!-- RHCSA Badge -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in">
-        <div class="card bg-black text-white h-100 shadow-sm border-0">
-          <img src="redhat-logo1.png" class="card-img-top p-4" alt="RHCSA Badge">
-          <div class="card-body">
-            <h5 class="card-title">Red Hat Certified System Administrator (RHCSA)</h5>
-            <a href="https://www.credly.com/badges/806bb792-bea8-4fe5-b02f-36fd9f4aa242/linked_in_profile" class="btn btn-outline-light btn-sm" target="_blank">Show Credential</a>
-          </div>
+      <div class="card bg-black text-white shadow-sm border-0 credential-card" data-aos="zoom-in">
+        <img src="redhat-logo1.png" class="card-img-top p-4" alt="RHCSA Badge">
+        <div class="card-body text-center">
+          <h6 class="card-title">RHCSA</h6>
+          <a href="https://www.credly.com/badges/806bb792-bea8-4fe5-b02f-36fd9f4aa242/linked_in_profile" class="btn btn-outline-light btn-sm" target="_blank">Show</a>
         </div>
       </div>
 
       <!-- Red Hat Program Learner -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card bg-black text-white h-100 shadow-sm border-0">
-          <img src="redhat-logo2.png" class="card-img-top p-4" alt="Red Hat Learner Badge">
-          <div class="card-body">
-            <h5 class="card-title">2025 Red Hat Academy – Program Learner</h5>
-            
-            <a href="https://www.credly.com/badges/e3426466-1a82-45b6-a3dd-e1c7b39da8d6/linked_in_profile" class="btn btn-outline-light btn-sm" target="_blank">Show Credential</a>
-          </div>
+      <div class="card bg-black text-white shadow-sm border-0 credential-card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="redhat-logo2.png" class="card-img-top p-4" alt="Red Hat Learner Badge">
+        <div class="card-body text-center">
+          <h6 class="card-title">Red Hat Learner</h6>
+          <a href="https://www.credly.com/badges/e3426466-1a82-45b6-a3dd-e1c7b39da8d6/linked_in_profile" class="btn btn-outline-light btn-sm" target="_blank">Show</a>
         </div>
       </div>
 
       <!-- UiPath Automation Explorer -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-        <div class="card bg-black text-white h-100 shadow-sm border-0">
-          <img src="uipath-logo1.png" class="card-img-top p-4" alt="UiPath Automation Explorer">
-          <div class="card-body">
-            <h5 class="card-title">UiPath Academy Automation Explorer</h5>
-          
-            <a href="https://credentials.uipath.com/daee4d9b-1b8b-495a-953c-c07f5c3b66bc" class="btn btn-outline-light btn-sm" target="_blank">Show Credential</a>
-          </div>
+      <div class="card bg-black text-white shadow-sm border-0 credential-card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="uipath-logo1.png" class="card-img-top p-4" alt="UiPath Automation Explorer">
+        <div class="card-body text-center">
+          <h6 class="card-title">UiPath Explorer</h6>
+          <a href="https://credentials.uipath.com/daee4d9b-1b8b-495a-953c-c07f5c3b66bc" class="btn btn-outline-light btn-sm" target="_blank">Show</a>
         </div>
       </div>
 
       <!-- UiPath RPA Citizen Developer -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-        <div class="card bg-black text-white h-100 shadow-sm border-0">
-          <img src="uipath-logo2.png" class="card-img-top p-4" alt="UiPath RPA Badge">
-          <div class="card-body">
-            <h5 class="card-title">UiPath RPA Citizen Developer Foundation</h5>
-            <a href="https://credentials.uipath.com/fdd15f90-ab45-4a07-995b-1a229035849e" class="btn btn-outline-light btn-sm" target="_blank">Show Credential</a>
-          </div>
+      <div class="card bg-black text-white shadow-sm border-0 credential-card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="uipath-logo2.png" class="card-img-top p-4" alt="UiPath RPA Badge">
+        <div class="card-body text-center">
+          <h6 class="card-title">RPA Developer</h6>
+          <a href="https://credentials.uipath.com/fdd15f90-ab45-4a07-995b-1a229035849e" class="btn btn-outline-light btn-sm" target="_blank">Show</a>
+        </div>
+      </div>
+
+      <!-- Cisco Badge -->
+      <div class="card bg-black text-white shadow-sm border-0 credential-card" data-aos="zoom-in" data-aos-delay="400">
+        <img src="cisco_badge.png" class="card-img-top p-4" alt="Cisco Badge">
+        <div class="card-body text-center">
+          <h6 class="card-title">Cisco Networking</h6>
+          <a href="https://www.credly.com/badges/2468d745-c541-4ca8-b4cb-b21b3ba10a93" class="btn btn-outline-light btn-sm" target="_blank">Show</a>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
 
 <section id="drawings" class="py-5 bg-white">
   <div class="container">
@@ -479,8 +653,7 @@
       <p class="mb-3">Feel free to reach out via email or follow me on social platforms.</p>
       <p>Email: <a href="mailto:smdivyasundhari@gmail.com" class="text-warning">smdivyasundhari@gmail.com</a></p>
       <div>
- <a href="https://www.linkedin.com/in/divya-sundhari-1a9035264" target="_blank" class="btn btn-outline-light btn-sm mx-2">LinkedIn</a>
-
+       <a href="https://www.linkedin.com/in/divya-sundhari-1a9035264" target="_blank" class="btn btn-outline-light btn-sm mx-2">LinkedIn</a>
 
         <a href="https://github.com/Divya-sm25" class="btn btn-outline-light btn-sm mx-2">GitHub</a>
       </div>
@@ -838,7 +1011,7 @@ URL-based filtering (e.g., products.html?category=mens_wear).</p>
       </div>
       <div class="modal-body text-center">
         <img src="draw3.jpeg" class="img-fluid rounded mb-3" alt="Drawing 3">
-        <p>Two faces emerge from one — both serene, both closed-eyed. Flowers link them like memories. She is caught between what was and what is, mourning a past self while blooming into someone new. The hummingbirds bring a whisper of rebirth. This piece is deeply spiritual, melancholic yet blooming.</p>
+        <p>With eyes that pierce through time and flowers entangled in her hair, this woman tells a story of growth through reflection. The petals sprouting from her flowing locks symbolize ideas blooming from within. She’s in tune with nature and emotion, soft yet fearless, curious yet wise.</p>
       </div>
     </div>
   </div>
@@ -945,6 +1118,29 @@ URL-based filtering (e.g., products.html?category=mens_wear).</p>
       nav.classList.remove('navbar-scrolled');
     }
   });
+
+AOS.init({
+    once: false // allows animation to happen every time you scroll back
+  });
+
+  // Animate width on AOS trigger
+  document.addEventListener('aos:in', ({ detail }) => {
+    const fill = detail.querySelector('.progress-fill');
+    if (fill) {
+      let percentage = fill.getAttribute('data-percentage');
+      fill.style.width = percentage + '%';
+    }
+  });
+
+  // Reset on scroll out
+  document.addEventListener('aos:out', ({ detail }) => {
+    const fill = detail.querySelector('.progress-fill');
+    if (fill) {
+      fill.style.width = '0%';
+    }
+  });
+
+
 </script>
 
 
